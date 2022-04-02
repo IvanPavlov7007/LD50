@@ -8,13 +8,13 @@ public class OneShotEvent : MonoBehaviour
     protected Transform player;
     public UnityEvent action;
 
-    protected void Start()
+    protected virtual void Start()
     {
         player = PlayerMovement.Instance.transform;
     }
     protected bool played = false;
 
-    public void Reset()
+    public virtual void Reset()
     {
         played = false;
     }

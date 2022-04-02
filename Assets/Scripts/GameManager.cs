@@ -2,14 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Singleton, input for the pause 
-/// </summary>
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
 
     public GameObject pauseMenu;
+
+    public bool GameStopped { get; private set; }
+
+    public void ContinueGame()
+    {
+        GameStopped = false;
+        PlayerMovement.Instance.enabled = true;
+        Time.timeScale = 1f;
+    }
+
+    public void StopGame()
+    {
+        GameStopped = true;
+        Time.timeScale = 0f;
+        PlayerMovement.Instance.enabled = false;
+    }
 
     void Awake()
     {
@@ -21,11 +34,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || pauseMenu.activeSelf)
+        if ((Input.GetKeyDown(KeyCode.Escape) || pauseMenu.activeSelf) && !GameStopped)
         {
             pauseMenu.SetActive(true);
             gameObject.SetActive(false);
-            Time.timeScale = 0f;
         }
     }
 
