@@ -36,6 +36,20 @@ public class ItemDisplayer : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        var craftingArea = ThumbnailsManager.instance.craftingArea;
+        if (RectTransformUtility.RectangleContainsScreenPoint(craftingArea.rectTransform, eventData.position))
+        {
+            var otherPart = craftingArea.tryCombyingItems(this);
+            if (otherPart != null)
+            {
+                ThumbnailsManager.instance.destroyThumbnail(this);
+                ThumbnailsManager.instance.destroyThumbnail(otherPart);
+            }
+            else
+                craftingArea.displayersInArea.Add(this);
+        }
+        else
+            craftingArea.displayersInArea.Remove(this);
         trySendToReciever(eventData.position);
     }
 
@@ -51,7 +65,7 @@ public class ItemDisplayer : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
             {
                 inventory.items.Remove(item);
                 Destroy(item.gameObject);
-                Destroy(gameObject);
+                ThumbnailsManager.instance.destroyThumbnail(this);
                 return true;
             }
             
