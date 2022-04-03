@@ -31,7 +31,7 @@ public class ThumbnailsManager : MonoBehaviour
     {
         var obj = Instantiate(itemDisplayerPrefab, transform);
         var displayer = obj.GetComponent<ItemDisplayer>();
-        displayer.item = item;
+        displayer.Initialize(item);
         return displayer;
     }
 }

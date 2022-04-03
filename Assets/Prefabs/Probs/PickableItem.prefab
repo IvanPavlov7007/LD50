@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4175082680789309740}
   - component: {fileID: 4175082680789309741}
   - component: {fileID: 4175082680789309746}
+  - component: {fileID: 5105790139831401959}
   m_Layer: 0
   m_Name: PickableItem
   m_TagString: Untagged
@@ -83,3 +84,15 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   dist: 2
+--- !u!114 &5105790139831401959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4175082680789309747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2775abee6abafd438de72e6e7d46a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
