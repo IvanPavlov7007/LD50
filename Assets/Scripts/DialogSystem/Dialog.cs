@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//[CreateAssetMenu(fileName = "Dialog", menuName = "ScriptableObjects/Dialog", order = 2)]
 public class Dialog : MonoBehaviour
 {
     [SerializeField]

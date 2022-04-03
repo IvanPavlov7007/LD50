@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+//[CreateAssetMenu(fileName = "ActionDialog", menuName = "ScriptableObjects/ActionDialog", order = 3)]
 public class ActionDialog : Dialog
 {
     [SerializeField]
