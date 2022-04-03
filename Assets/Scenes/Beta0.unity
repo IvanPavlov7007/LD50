@@ -2078,11 +2078,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1164367072, guid: 93895849407695f489bacd4347459ceb, type: 3}
-      propertyPath: mixer
-      value: 
-      objectReference: {fileID: 24100000, guid: 4d4327a295e8dc848a84f66271077b64,
-        type: 2}
     - target: {fileID: 5840897474146747994, guid: 93895849407695f489bacd4347459ceb,
         type: 3}
       propertyPath: m_Name

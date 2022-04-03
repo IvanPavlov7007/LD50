@@ -148,6 +148,7 @@ MonoBehaviour:
   dimManager: {fileID: 1320326309914880305}
   lowOxThreshold: 25
   maxAberration: 8
+  mixer: {fileID: 24100000, guid: 4d4327a295e8dc848a84f66271077b64, type: 2}
 --- !u!114 &7551884522210884799
 MonoBehaviour:
   m_ObjectHideFlags: 0

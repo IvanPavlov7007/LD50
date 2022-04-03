@@ -25,7 +25,8 @@ public class CharacterMovement : MonoBehaviour
     }
     protected void Update()
     {
-        anim.SetBool("walk", direction.magnitude > 0.01f);
+        anim.SetBool("walk", direction.magnitude > 0.001f);
+        if(direction.magnitude > 0.001f)
         sr.flipX = Vector3.Angle(direction, Vector3.right) > 90f;
     }
 
