@@ -9,6 +9,8 @@ public class DoorController : MonoBehaviour
     public Transform doorBlock;
     public float distance;
     public float time;
+
+    public bool open = false;
      
     public AudioSource openSource;  // ;P hehehe
     public AudioSource closedSource; 
@@ -22,13 +24,20 @@ public class DoorController : MonoBehaviour
 
     public void Open()
     {
-        openSource.Play();
-        Tween.Position(doorBlock, closedPosition, closedPosition - new Vector3(0, distance, 0), time, 0);
+        if(!open)
+        {
+            openSource.Play();
+            Tween.Position(doorBlock, closedPosition, closedPosition - new Vector3(0, distance, 0), time, 0);
+            open = true;
+        }
     }
     
     public void Close()
     {
-        closedSource.Play();
-        Tween.Position(doorBlock, closedPosition - new Vector3(0, distance, 0), closedPosition, time, 0);
+        if(open) { 
+            closedSource.Play();
+            Tween.Position(doorBlock, closedPosition - new Vector3(0, distance, 0), closedPosition, time, 0);
+            open = false;
+        }
     }
 }
