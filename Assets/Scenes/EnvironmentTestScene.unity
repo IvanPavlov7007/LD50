@@ -631,12 +631,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &648041329 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 3960131989623736456, guid: 93895849407695f489bacd4347459ceb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1886576588}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &765431023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1188,30 +1182,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 630d7ba986dcd0949898113242b60c6f, type: 3}
---- !u!1 &1164367065 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5840897474146747994, guid: 93895849407695f489bacd4347459ceb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1886576588}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1164367072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1164367065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e9a6717e9586e64595dc2ba2c683418, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oxygen: 100
-  audioSource: {fileID: 648041329}
-  normalBreathing: {fileID: 8300000, guid: 69a379fcb19586c42975b15e28521fbd, type: 3}
-  hardBreathing: {fileID: 8300000, guid: 92893a26e03a36c45a22b8e20bf13bf0, type: 3}
-  death: {fileID: 8300000, guid: 4fcb197639951474aae2e9b797112a4a, type: 3}
-  lowOxThreshold: 25
 --- !u!1 &1335312902
 GameObject:
   m_ObjectHideFlags: 0
