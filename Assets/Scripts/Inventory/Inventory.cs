@@ -25,7 +25,6 @@ public class Inventory : MonoBehaviour
         {
             if((c.i1 == i1 && c.i2 == i2) || (c.i1 == i2 && c.i2 == i1))
             {
-                c.dialog.Reset();
                 dialogPoint.StartDialog(c.dialog);
                 return true;
             }    
@@ -35,6 +34,8 @@ public class Inventory : MonoBehaviour
 
     public void addItem(Item item)
     {
+        if (items.Contains(item))
+            return;
         items.Add(item);
         if (onItemAdded != null)
             onItemAdded(item);

@@ -17,7 +17,7 @@ public class CraftingArea : MonoBehaviour
         var inventory = GameManager.instance.inventory;
         for (int i = 0; i < displayersInArea.Count; i++)
         {
-            if (inventory.CombineItems(displayer.item, displayersInArea[i].item) != null)
+            if (inventory.CombineItems(displayer.item, displayersInArea[i].item))
             {
                 return displayersInArea[i];
             }
