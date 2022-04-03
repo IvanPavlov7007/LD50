@@ -40,7 +40,8 @@ AudioSource:
   m_GameObject: {fileID: 3806954298312596618}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 490399509557630562, guid: 4d4327a295e8dc848a84f66271077b64,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 69a379fcb19586c42975b15e28521fbd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -144,7 +145,9 @@ MonoBehaviour:
   normalBreathing: {fileID: 8300000, guid: 69a379fcb19586c42975b15e28521fbd, type: 3}
   hardBreathing: {fileID: 8300000, guid: 92893a26e03a36c45a22b8e20bf13bf0, type: 3}
   death: {fileID: 8300000, guid: 4fcb197639951474aae2e9b797112a4a, type: 3}
+  dimManager: {fileID: 1320326309914880305}
   lowOxThreshold: 25
+  maxAberration: 8
 --- !u!114 &7551884522210884799
 MonoBehaviour:
   m_ObjectHideFlags: 0
