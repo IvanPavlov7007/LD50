@@ -40,7 +40,7 @@ public class PlayerOxygen : MonoBehaviour
             audioSource.Play();
             state = OxygenState.Low;
         }
-        if(oxygen == 0)
+        if(oxygen == 0 && state != OxygenState.None)
         {
             state = OxygenState.None;
             Suffocate();
@@ -49,6 +49,8 @@ public class PlayerOxygen : MonoBehaviour
 
     public void Suffocate()
     {
-        audioSource.PlayOneShot(death);
+        audioSource.clip = death;
+        audioSource.loop = false;
+        audioSource.Play();
     }
 }
