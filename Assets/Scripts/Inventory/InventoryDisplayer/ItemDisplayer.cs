@@ -17,13 +17,14 @@ public class ItemDisplayer : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
-        img = GetComponentInChildren<Image>();
+        
     }
 
     private void Start()
     {
         cam = Camera.main;
         inventory = GameManager.instance.inventory;
+        img = GetComponentInChildren<Image>();
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -81,6 +82,7 @@ public class ItemDisplayer : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
 
     public void Initialize(Item item)
     {
+        Start();
         this.item = item;
         if(item.thumbnail != null)
             img.sprite = item.thumbnail;

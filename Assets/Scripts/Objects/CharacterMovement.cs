@@ -10,8 +10,10 @@ public class CharacterMovement : MonoBehaviour
 
     protected Rigidbody rb;
     protected Animator anim;
+    protected SpriteRenderer sr;
 
-    
+
+
     public Vector3 direction { get; set; }
 
 
@@ -19,10 +21,12 @@ public class CharacterMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        sr = GetComponentInChildren<SpriteRenderer>();
     }
     protected void Update()
     {
         anim.SetBool("walk", direction.magnitude > 0.01f);
+        sr.flipX = Vector3.Angle(direction, Vector3.right) > 90f;
     }
 
     protected private void FixedUpdate()
