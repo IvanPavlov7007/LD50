@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject pauseMenu;
 
+    public Inventory inventory;
+
     public bool GameStopped { get; private set; }
 
     public void ContinueGame()
