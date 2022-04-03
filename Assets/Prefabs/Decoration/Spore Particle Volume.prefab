@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7266709162932856182}
   - component: {fileID: 7266709162932856181}
   m_Layer: 0
-  m_Name: Spore Particle System
+  m_Name: Spore Particle Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
