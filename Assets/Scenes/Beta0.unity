@@ -2078,10 +2078,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 646953065, guid: 93895849407695f489bacd4347459ceb, type: 3}
+      propertyPath: cursorLight
+      value: 
+      objectReference: {fileID: 1685731975}
     - target: {fileID: 5840897474146747994, guid: 93895849407695f489bacd4347459ceb,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840897474146747996, guid: 93895849407695f489bacd4347459ceb,
+        type: 3}
+      propertyPath: facingRight
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5840897474146747999, guid: 93895849407695f489bacd4347459ceb,
         type: 3}
