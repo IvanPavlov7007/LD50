@@ -648,6 +648,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Loose Cable
       objectReference: {fileID: 0}
+    - target: {fileID: 4175082680789309747, guid: 98c5590bf43243b4486c6c67eabe572f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5920290803201572575, guid: 98c5590bf43243b4486c6c67eabe572f,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4214,6 +4219,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Balloon Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699437394441974134, guid: b8a5eb36373c4e647bac7837de352892,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6699437394441974135, guid: b8a5eb36373c4e647bac7837de352892,
         type: 3}
