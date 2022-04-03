@@ -60,7 +60,8 @@ public class DimManager : TransparencyChangingComponent {
         {
             visibility = value;
             material.SetFloat(visibilityProperty, visibility);
-            material.SetFloat(deltaRadiusProperty, Mathf.Pow(visibility,0.5f) * 1f);
+            material.SetFloat(deltaRadiusProperty, Mathf.Pow(visibility, 0.5f) * 1f);
+
         }
     }
 

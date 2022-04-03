@@ -57,6 +57,8 @@
 
 			fixed4 frag(v2f i) : SV_Target
 			{
+				if (_Visibility < 0.0001) return 0;
+
 				fixed4 col = tex2D(_MainTex, i.uv);
 				fixed r = tex2D(_DistanceMap, i.uv).r;
 				fixed curVis = 1. - step(_Visibility, r) *((r - _Visibility) / _DeltaRadius);
