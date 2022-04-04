@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6412d09cd7969c64883053b0578bb638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialOxygenLevel: 10000
+  initialOxygenLevel: 1000
   onDeath:
     m_PersistentCalls:
       m_Calls:
