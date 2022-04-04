@@ -1321,7 +1321,7 @@ PrefabInstance:
       objectReference: {fileID: 660676228}
     - target: {fileID: 109477592, guid: 7d0f8a1584562d84eaff69319c10d764, type: 3}
       propertyPath: initialOxygenLevel
-      value: 100
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5517787868486688717, guid: 7d0f8a1584562d84eaff69319c10d764,
         type: 3}
@@ -7906,6 +7906,7 @@ GameObject:
   - component: {fileID: 691515128}
   - component: {fileID: 691515130}
   - component: {fileID: 691515129}
+  - component: {fileID: 691515131}
   m_Layer: 0
   m_Name: IntroPhrase
   m_TagString: Untagged
@@ -7998,8 +7999,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 691515131}
+        m_MethodName: Disable
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onStart: 1
   triggerTime: 2
+--- !u!114 &691515131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691515126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae3b3c4e87a2a7641a057013c4e69ccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &694262672
 GameObject:
   m_ObjectHideFlags: 0
