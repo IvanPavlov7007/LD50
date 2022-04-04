@@ -6,7 +6,7 @@ using UnityEngine;
 public class Dialog : MonoBehaviour
 {
     [SerializeField]
-    protected string[] lines;
+    protected Phrase[] lines;
 
     protected int index = -1;
 
@@ -25,15 +25,24 @@ public class Dialog : MonoBehaviour
     }
 }
 
+[System.Serializable]
+public struct Phrase 
+{
+    public string line;
+    public string name;
+    public Sprite icon;
+    public bool fromTheRigt;
+}
+
 public class DialogResult
 {
     public readonly ResultType resultType;
-    public readonly string text;
+    public readonly Phrase phrase;
     public enum ResultType {NextLine, Action, End}
 
-    public DialogResult(string text)
+    public DialogResult(Phrase text)
     {
-        this.text = text;
+        this.phrase = text;
         resultType = ResultType.NextLine;
     }
 

@@ -31,6 +31,7 @@ public class ThumbnailsManager : MonoBehaviour
         inventory = GameManager.instance.inventory;
         inventory.onItemAdded += onItemAdded;
         craftingArea = GetComponentInChildren<CraftingArea>();
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame

@@ -10,6 +10,10 @@ public class DialogUI : MonoBehaviour
     [SerializeField]
     GameObject dialogElements;
 
+    PlayerMovement playerMovement;
+    [SerializeField]
+    float maxDialogDistance = 2f;
+
     AudioSource audioSource;
 
     [SerializeField]
@@ -29,12 +33,16 @@ public class DialogUI : MonoBehaviour
     private void Start()
     {
         audioSource = Camera.main.GetComponent<AudioSource>();
+        playerMovement = PlayerMovement.Instance;
     }
 
+
+    Vector3 playerInitPos;
     public void Activate(Dialog d)
     {
+        playerInitPos = playerMovement.transform.position;
         currentDialog = d;
-        GameManager.instance.StopGame();
+        //GameManager.instance.StopGame();
         skipFrame = true;
         //MusicManager.instance.DampenMusic();
         ShowDialog();
@@ -45,7 +53,11 @@ public class DialogUI : MonoBehaviour
     float elapsedTime = 0f;
     void Update()
     {
-        if(!skipFrame && elapsedTime > timeNoSkip && currentDialog != null && Input.GetKeyDown(KeyCode.E))
+        if (Vector3.Distance(playerInitPos, playerMovement.transform.position) > maxDialogDistance)
+            BreakDialog();
+
+
+        if (!skipFrame && elapsedTime > timeNoSkip && currentDialog != null && Input.GetKeyDown(KeyCode.E))
         {
             next();
         }
@@ -59,13 +71,13 @@ public class DialogUI : MonoBehaviour
         var result = currentDialog.next();
         if(result.resultType == DialogResult.ResultType.NextLine)
         {
-            dislpayedText.text = result.text;
+            dislpayedText.text = result.phrase.line;
         }
 
         if(result.resultType == DialogResult.ResultType.End)
         {
             dislpayedText.text = string.Empty;
-            GameManager.instance.ContinueGame();
+            //GameManager.instance.ContinueGame();
             currentDialog = null;
             //MusicManager.instance.RestoreNormalVolime();
 
@@ -75,6 +87,16 @@ public class DialogUI : MonoBehaviour
         audioSource.PlayOneShot(clickSound);
         //for not skipping frame unintentially
         elapsedTime = 0f;
+    }
+
+    public void BreakDialog()
+    {
+        dislpayedText.text = string.Empty;
+        //GameManager.instance.ContinueGame();
+        currentDialog = null;
+        //MusicManager.instance.RestoreNormalVolime();
+
+        CloseDialog();
     }
 
     public void ShowDialog()
