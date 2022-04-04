@@ -28,6 +28,11 @@ public class OxygenManager : MonoBehaviour
         player = PlayerMovement.Instance.GetComponent<PlayerOxygen>();
     }
 
+    public void addOxygen(float seconds)
+    {
+        oxygenLevel += seconds;
+    }
+
     void Update()
     {
         oxygenLevel -= Time.deltaTime;

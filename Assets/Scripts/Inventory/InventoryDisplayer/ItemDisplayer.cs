@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
-public class ItemDisplayer : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler 
+public class ItemDisplayer : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
 
     RectTransform rectTransform;
     Camera cam;
     Image img;
     Inventory inventory;
+    TextMeshProUGUI displayer;
 
     public Item item { get; private set; }
 
@@ -25,6 +27,7 @@ public class ItemDisplayer : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
         cam = Camera.main;
         inventory = GameManager.instance.inventory;
         img = GetComponentInChildren<Image>();
+        displayer = InGameUIManager.instance.objectUnderPointerHint.GetComponent<TextMeshProUGUI>();
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -52,6 +55,14 @@ public class ItemDisplayer : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
         else
             craftingArea.displayersInArea.Remove(this);
         trySendToReciever(eventData.position);
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if(item.activate())
+        {
+            ThumbnailsManager.instance.destroyThumbnail(this);
+        }
     }
 
     bool trySendToReciever(Vector3 position)
@@ -84,7 +95,21 @@ public class ItemDisplayer : MonoBehaviour, IPointerDownHandler, IBeginDragHandl
     {
         Start();
         this.item = item;
-        if(item.thumbnail != null)
+        name = item.name;
+        if (item.thumbnail != null)
+        {
+            ThumbnailsManager.instance.craftingArea.displayersInArea.Remove(this);
             img.sprite = item.thumbnail;
+        }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        displayer.SetText(name);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        displayer.SetText(string.Empty);
     }
 }
