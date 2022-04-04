@@ -15,7 +15,7 @@ public class DoIfAfterdeath : MonoBehaviour
         int count = IntersceneData.deathCounts;
         if (biggerThan)
         {
-            if (afterDeathNumber > count)
+            if (count > afterDeathNumber)
                 action.Invoke();
         }
         else if (afterDeathNumber == count)

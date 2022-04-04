@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+using Pixelplacement;
+
 public class DialogUI : MonoBehaviour
 {
     [SerializeField]
@@ -25,6 +27,9 @@ public class DialogUI : MonoBehaviour
     Dialog currentDialog;
 
     public static DialogUI instance;
+
+    StateMachine layouts;
+
     private void Awake()
     {
         instance = this;
@@ -32,6 +37,7 @@ public class DialogUI : MonoBehaviour
 
     private void Start()
     {
+        layouts = GetComponentInChildren<StateMachine>();
         audioSource = Camera.main.GetComponent<AudioSource>();
         playerMovement = PlayerMovement.Instance;
     }
@@ -71,7 +77,7 @@ public class DialogUI : MonoBehaviour
         var result = currentDialog.next();
         if(result.resultType == DialogResult.ResultType.NextLine)
         {
-            dislpayedText.text = result.phrase.line;
+            displayPhrase(result.phrase);
         }
 
         if(result.resultType == DialogResult.ResultType.End)
@@ -87,6 +93,37 @@ public class DialogUI : MonoBehaviour
         audioSource.PlayOneShot(clickSound);
         //for not skipping frame unintentially
         elapsedTime = 0f;
+    }
+
+    public void displayPhrase(Phrase phrase)
+    {
+        GameObject g_layout;
+        DialogLayout layout;
+        if(phrase.icon != null)
+        {
+            if(phrase.fromTheRigt)
+            {
+                g_layout = layouts.ChangeState("NameTextImageRight");
+            }
+            else
+                g_layout = layouts.ChangeState("NameTextImageLeft");
+        }
+        else if(phrase.name != string.Empty)
+        {
+            g_layout = layouts.ChangeState("NameText");
+        }
+        else
+            g_layout = layouts.ChangeState("Text");
+
+        if (g_layout == null)
+            g_layout = layouts.currentState;
+
+        layout = g_layout.GetComponent<DialogLayout>();
+
+        layout.setIcon(phrase.icon);
+        layout.setName(phrase.name,phrase.fromTheRigt);
+        layout.setText(phrase.line, phrase.fromTheRigt);
+
     }
 
     public void BreakDialog()
