@@ -65,9 +65,8 @@
                 + tex2D(_MainTex, lerp(i.screenPos.xy, i.uv, 0.13) * _Scale * 0.6) * 0.8
                 + tex2D(_MainTex, lerp(i.screenPos.xy, i.uv, 0.25) * _Scale * 0.3) * 0.95
                 + max(1.0 - i.uv.x + i.uv.y, 0.1) * 0.05 * float4(0.650, 0.811, 0.949, 0)) * _Brightness;
-
                 // apply fog
-                UNITY_APPLY_FOG(i.fogCoord, o.color);
+                //UNITY_APPLY_FOG(i.fogCoord, o.color);
                 return o;
             }
             ENDCG
