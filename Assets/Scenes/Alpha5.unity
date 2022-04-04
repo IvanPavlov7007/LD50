@@ -1338,7 +1338,7 @@ PrefabInstance:
       objectReference: {fileID: 660676228}
     - target: {fileID: 109477592, guid: 7d0f8a1584562d84eaff69319c10d764, type: 3}
       propertyPath: initialOxygenLevel
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 109477592, guid: 7d0f8a1584562d84eaff69319c10d764, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size

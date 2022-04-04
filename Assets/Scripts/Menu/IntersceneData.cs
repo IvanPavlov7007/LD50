@@ -10,6 +10,7 @@ public static class IntersceneData
     public static float _those;
 
     public static int deathCounts = 0;
+    public static bool finalAchieved = false;
 
     public static void LoadNextScene(string scene)
     {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.Video;
 
 /// <summary>
 /// Use for asset management during loading
@@ -8,7 +9,8 @@ using UnityEngine;
 public class LoadingScene : MonoBehaviour
 {
     public float minLoadingTime;
-
+    [SerializeField]
+    VideoPlayer vp;
     
 
     void Start()
@@ -25,20 +27,24 @@ public class LoadingScene : MonoBehaviour
         yield return null;
         if(IntersceneData.exit)
         {
-            while(currentLoadingTime < minLoadingTime)
-            {
-                yield return new WaitForEndOfFrame();
-                currentLoadingTime += Time.deltaTime;
-            }
+            //while(currentLoadingTime < minLoadingTime)
+            //{
+            //    yield return new WaitForEndOfFrame();
+            //    currentLoadingTime += Time.deltaTime;
+            //}
             Application.Quit();
         }
 
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(IntersceneData.sceneToLoad);
         asyncOperation.allowSceneActivation = false;
-        while(asyncOperation.progress < 0.9f || currentLoadingTime < minLoadingTime)
+        if (IntersceneData.finalAchieved)
         {
-            yield return new WaitForEndOfFrame();
-            currentLoadingTime += Time.deltaTime;
+            vp.Play();
+            while (asyncOperation.progress < 0.9f || currentLoadingTime < minLoadingTime)
+            {
+                yield return new WaitForEndOfFrame();
+                currentLoadingTime += Time.deltaTime;
+            }
         }
 
         asyncOperation.allowSceneActivation = true;
