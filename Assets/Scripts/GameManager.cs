@@ -33,6 +33,13 @@ public class GameManager : MonoBehaviour
         IntersceneData.LoadNextScene(SceneManager.GetActiveScene().name);
     }
 
+    public void onWin()
+    {
+        IntersceneData.deathCounts = 0;
+        IntersceneData.finalAchieved = true;
+        IntersceneData.LoadNextScene(SceneManager.GetActiveScene().name);
+    }
+
     void Awake()
     {
         if (instance == null)
