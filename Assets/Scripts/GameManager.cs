@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
 
     public void onDeath()
     {
+        IntersceneData.deathCounts++;
         IntersceneData.LoadNextScene(SceneManager.GetActiveScene().name);
     }
 
