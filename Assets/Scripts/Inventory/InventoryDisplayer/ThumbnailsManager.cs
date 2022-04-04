@@ -17,6 +17,14 @@ public class ThumbnailsManager : MonoBehaviour
 
     public static ThumbnailsManager instance{ get;private set;}
 
+    [SerializeField]
+    Toggle inventoryToggle;
+    [SerializeField]
+    Transform initPos;
+    [SerializeField]
+    Vector3 stepSize;
+    int step = 0;
+
     private void Awake()
     {
         instance = this;
@@ -44,6 +52,7 @@ public class ThumbnailsManager : MonoBehaviour
     {
         var displayer = createItemDisplayer(item);
         displayers.Add(displayer);
+        inventoryToggle.isOn = true;
     }
 
     public void destroyThumbnail(ItemDisplayer displayer)
@@ -62,8 +71,10 @@ public class ThumbnailsManager : MonoBehaviour
     ItemDisplayer createItemDisplayer(Item item)
     {
         //var obj = Instantiate(itemDisplayerPrefab, new Vector3(Random.Range(0,rectTransform.rect.width), Random.Range(0, rectTransform.rect.height), 0), Quaternion.identity  ,transform);
-        var obj = Instantiate(itemDisplayerPrefab, transform);
-
+        var obj = Instantiate(itemDisplayerPrefab, initPos.position + stepSize * step,Quaternion.identity, transform);
+        step++;
+        if (step == 5)
+            step = 0;
         var displayer = obj.GetComponent<ItemDisplayer>();
         displayer.Initialize(item);
         return displayer;
