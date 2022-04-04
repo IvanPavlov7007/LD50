@@ -33,11 +33,18 @@ public class OxygenManager : MonoBehaviour
         oxygenLevel += seconds;
     }
 
+    bool dead = false;
+
     void Update()
     {
+        if (dead)
+            return;
         oxygenLevel -= Time.deltaTime;
         player.oxygen = (oxygenLevel / initialOxygenLevel) * 100f;
         if (oxygenLevel < 0f)
+        {
+            dead = true;
             onDeath.Invoke();
+        }
     }
 }
