@@ -21,6 +21,8 @@ public class OxygenManager : MonoBehaviour
     {
         instance = this;
         OxygenLevel = initialOxygenLevel;
+        if (IntersceneData._this)
+            addOxygen(3600f);
     }
 
     private void Start()

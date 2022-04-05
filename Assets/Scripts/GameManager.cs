@@ -40,6 +40,11 @@ public class GameManager : MonoBehaviour
         IntersceneData.LoadNextScene(SceneManager.GetActiveScene().name);
     }
 
+    public void easyMode()
+    {
+        OxygenManager.instance.addOxygen(3600f);
+    }
+
     void Awake()
     {
         if (instance == null)
@@ -48,10 +53,22 @@ public class GameManager : MonoBehaviour
             Destroy(this);
     }
 
+
+    bool easyTriggered;
     private void Update()
     {
+        if(!easyTriggered)
+        {
+            if(IntersceneData._this)
+            {
+                easyTriggered = true;
+                easyMode();
+            }
+        }
+
         if ((Input.GetKeyDown(KeyCode.Escape) || pauseMenu.activeSelf) && !GameStopped)
         {
+            Time.timeScale = 0f;
             pauseMenu.SetActive(true);
             gameObject.SetActive(false);
         }
