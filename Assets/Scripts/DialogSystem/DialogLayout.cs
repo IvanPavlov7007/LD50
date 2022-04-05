@@ -13,16 +13,20 @@ public class DialogLayout : MonoBehaviour
 
     public void setText(string txt, bool fromRight)
     {
-        if(text != null)
+        if (text != null)
+        {
             text.SetText(txt);
-        text.alignment = fromRight ? TextAlignmentOptions.Right : TextAlignmentOptions.Left;
+            text.alignment = fromRight ? TextAlignmentOptions.Right : TextAlignmentOptions.Left;
+        }
     }
 
     public void setName(string txt, bool fromRight)
     {
-        if(characterName != null)
+        if (characterName != null)
+        {
             characterName.SetText(txt);
-        characterName.alignment = fromRight ? TextAlignmentOptions.Right : TextAlignmentOptions.Left;
+            characterName.alignment = fromRight ? TextAlignmentOptions.Right : TextAlignmentOptions.Left;
+        }
     }
 
     public void setIcon(Sprite s)

@@ -966,6 +966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: Do you know anything about the plants in our ship?
     name: Space Marine
@@ -1338,7 +1339,7 @@ PrefabInstance:
       objectReference: {fileID: 660676228}
     - target: {fileID: 109477592, guid: 7d0f8a1584562d84eaff69319c10d764, type: 3}
       propertyPath: initialOxygenLevel
-      value: 2
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 109477592, guid: 7d0f8a1584562d84eaff69319c10d764, type: 3}
       propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
@@ -1491,6 +1492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 1
   lines:
   - line: Maybe I can extract some sap with this sharp shard!
     name: Space Marine
@@ -1885,6 +1887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: "Loose Cable was my boyfriend\u2019s nickname in high school."
     name: Medic
@@ -3643,6 +3646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: Wow. Make a balloon animal next!
     name: Medic
@@ -4076,6 +4080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: It seems to be broken.
     name: 
@@ -4956,9 +4961,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 1
   lines:
-  - line: 
-    name: 
+  - line: "Let\u2019s try something I wanted to do since I was a child! It worked!"
+    name: Space Marine
     icon: {fileID: 0}
     fromTheRigt: 0
   action:
@@ -5793,6 +5799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: "It\u2019s working again!"
     name: Space Marine
@@ -6091,6 +6098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: "Maybe the pilot knows which book I have to find in this mess\u2026"
     name: Space Marine
@@ -7310,17 +7318,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 1380585932}
-          m_MethodName: SetDialog
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 84999234}
-            m_ObjectArgumentAssemblyTypeName: Dialog, Assembly-CSharp
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &575867672
 GameObject:
   m_ObjectHideFlags: 0
@@ -7477,6 +7474,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: "Don\u2019t you dare fight me! I\u2019m trained in Ju Jutsu!"
     name: Medic
@@ -7582,6 +7580,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1379227700}
     m_Modifications:
+    - target: {fileID: 919132147885576610, guid: 630d7ba986dcd0949898113242b60c6f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6147174792879405290, guid: 630d7ba986dcd0949898113242b60c6f,
         type: 3}
       propertyPath: m_RootOrder
@@ -7640,7 +7643,7 @@ PrefabInstance:
     - target: {fileID: 6774810542386160208, guid: 630d7ba986dcd0949898113242b60c6f,
         type: 3}
       propertyPath: m_Name
-      value: Door Frame (3)
+      value: Unfixable door
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 630d7ba986dcd0949898113242b60c6f, type: 3}
@@ -8290,6 +8293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: A wise man once said, never to give up, never to let down, never to run
       around and desert anyone. You should do that! If I can help in any way, or
@@ -8495,6 +8499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: --cough, cough--
     name: Space Marine
@@ -8556,8 +8561,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
-  - line: Maybe I can extract some sap with this sharp shard!
+  - line: "Great idea, but why? Maybe I\u2019ll find a reason later."
     name: Space Marine
     icon: {fileID: 0}
     fromTheRigt: 0
@@ -8749,7 +8755,7 @@ GameObject:
   - component: {fileID: 691240488}
   - component: {fileID: 691240489}
   m_Layer: 0
-  m_Name: Dialog
+  m_Name: Dialog BrokespaceSuit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8781,9 +8787,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 1
   lines:
-  - line: 
-    name: 
+  - line: "his space suit is broken. But there\u2019s some amazingly durable bubble
+      gum inside."
+    name: Space Marine
     icon: {fileID: 0}
     fromTheRigt: 0
   action:
@@ -8846,6 +8854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: --cough, cough-- What the hell just happened?
     name: Space Marine
@@ -9443,6 +9452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: The computer is fixed! Now, what book should I look into?
     name: Space Marine
@@ -9451,10 +9461,10 @@ MonoBehaviour:
   - line: "I don\u2019t even know if I\u2019m capable enough to look into the registry\u2026
       The mission briefing should be in one of the more greenish books, maybe a yellow
       one? Ahhh, here! It\u2019s the dark brown book titled \u2018Basics of Gordukk
-      Culture\u2019.\u201D SM: \u201CThanks, Captain."
+      Culture\u2019."
     name: Pilot
     icon: {fileID: 0}
-    fromTheRigt: 0
+    fromTheRigt: 1
   - line: Thanks, Captain.
     name: Space Marine
     icon: {fileID: 0}
@@ -9463,7 +9473,7 @@ MonoBehaviour:
       a leader, aren\u2019t I?"
     name: Pilot
     icon: {fileID: 0}
-    fromTheRigt: 0
+    fromTheRigt: 1
   action:
     m_PersistentCalls:
       m_Calls:
@@ -9473,6 +9483,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1416398455}
           m_ObjectArgumentAssemblyTypeName: Dialog, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 734344164}
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10536,6 +10557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: I once had so much oxygen, that I thought I was floating through space.
       Turns out I was.
@@ -10846,6 +10868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: "These things look so strange. Maybe there\u2019s a book about them in
       the Archive? I should take one of them with me."
@@ -11852,6 +11875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: "Captain, I think I just died\u2026"
     name: Space Marine
@@ -12183,7 +12207,7 @@ PrefabInstance:
     - target: {fileID: 6774810542386160208, guid: 630d7ba986dcd0949898113242b60c6f,
         type: 3}
       propertyPath: m_Name
-      value: Door Frame (1)
+      value: Door Frame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 630d7ba986dcd0949898113242b60c6f, type: 3}
@@ -12204,7 +12228,7 @@ GameObject:
   - component: {fileID: 1027605978}
   - component: {fileID: 1027605979}
   m_Layer: 0
-  m_Name: Dialog
+  m_Name: Dialog SpacceSuit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12236,9 +12260,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 1
   lines:
-  - line: 
-    name: 
+  - line: What a huge space suit. Does have a normal oxygen tank in it though.
+    name: Space Marine
     icon: {fileID: 0}
     fromTheRigt: 0
   action:
@@ -12446,6 +12471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: "I think vaping is the last thing I\u2019d do on a sinking space ship."
     name: 
@@ -12983,6 +13009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: What a mess.
     name: Space Marine
@@ -13253,6 +13280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: "Great idea, but why? Maybe I\u2019ll find a reason later."
     name: Space Marine
@@ -15050,6 +15078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: 'These things look so strange. '
     name: Space Marine
@@ -15151,7 +15180,7 @@ PrefabInstance:
     - target: {fileID: 5588525182288811791, guid: 09d8e7be68b3c7640b7956d241869c58,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.14
+      value: 23.13
       objectReference: {fileID: 0}
     - target: {fileID: 5588525182288811791, guid: 09d8e7be68b3c7640b7956d241869c58,
         type: 3}
@@ -15161,7 +15190,7 @@ PrefabInstance:
     - target: {fileID: 5588525182288811791, guid: 09d8e7be68b3c7640b7956d241869c58,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.17
+      value: 1.57
       objectReference: {fileID: 0}
     - target: {fileID: 5588525182288811791, guid: 09d8e7be68b3c7640b7956d241869c58,
         type: 3}
@@ -15569,6 +15598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: "Let\u2019s find out more about these plants"
     name: Space Marine
@@ -16213,6 +16243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: --cough, cough--
     name: Space Marine
@@ -16457,6 +16488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: --cough, cough--
     name: Space Marine
@@ -17781,6 +17813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: "It\u2019s working again!"
     name: Space Marine
@@ -17871,6 +17904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: Captain! What happened?
     name: Space Marine
@@ -18746,6 +18780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: --cough, cough--
     name: Space Marine
@@ -18894,6 +18929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: "These plants are hilarious. Their spores are everywhere and since I inhaled
       them I have the strangest nightmares\u2026 We\u2019re in one of those right
@@ -18980,7 +19016,7 @@ PrefabInstance:
     - target: {fileID: 6774810542386160208, guid: 630d7ba986dcd0949898113242b60c6f,
         type: 3}
       propertyPath: m_Name
-      value: Door Frame (4)
+      value: Door Frame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 630d7ba986dcd0949898113242b60c6f, type: 3}
@@ -19032,6 +19068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: "That smells really nice to be honest\u2026"
     name: Space Marine
@@ -19044,7 +19081,51 @@ MonoBehaviour:
     fromTheRigt: 1
   action:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1804763192}
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1692393924}
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2088869606}
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1976834325}
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1909685366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19249,6 +19330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: "Uhhh, my bubble gum! Keep it, I\u2019m not in the mood."
     name: Medic
@@ -19555,7 +19637,7 @@ PrefabInstance:
     - target: {fileID: 6774810542386160208, guid: 630d7ba986dcd0949898113242b60c6f,
         type: 3}
       propertyPath: m_Name
-      value: Door Frame (2)
+      value: Door Frame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 630d7ba986dcd0949898113242b60c6f, type: 3}
@@ -19880,6 +19962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: "Space Marine: \u201CMedic, you\u2019re still alive!"
     name: 
@@ -20016,6 +20099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: What a mess.
     name: Space Marine
@@ -20057,7 +20141,7 @@ GameObject:
   - component: {fileID: 1976834324}
   - component: {fileID: 1976834325}
   m_Layer: 8
-  m_Name: TimerCredits (1)
+  m_Name: WinTimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21280,6 +21364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: "Doctor, I think I\u2019ve just died\u2026"
     name: Space Marine
@@ -21994,6 +22079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db38bb28afcd82348afc670a9d3507a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMovement: 0
   lines:
   - line: --cough, cough--
     name: Space Marine

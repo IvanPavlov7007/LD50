@@ -6,6 +6,9 @@ using UnityEngine;
 public class Dialog : MonoBehaviour
 {
     [SerializeField]
+    public bool disableMovement;
+
+    [SerializeField]
     protected Phrase[] lines;
 
     protected int index = -1;

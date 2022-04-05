@@ -46,6 +46,12 @@ public class DialogUI : MonoBehaviour
     Vector3 playerInitPos;
     public void Activate(Dialog d)
     {
+        if(d.disableMovement)
+        {
+            playerMovement.enabled = false;
+            playerMovement.GetComponent<CharacterMovement>().direction = Vector3.zero;
+        }
+
         playerInitPos = playerMovement.transform.position;
         currentDialog = d;
         //GameManager.instance.StopGame();
@@ -143,6 +149,7 @@ public class DialogUI : MonoBehaviour
 
     public void CloseDialog()
     {
+        playerMovement.enabled = true;
         dialogElements.SetActive(false);
     }
 }
