@@ -18252,59 +18252,59 @@ MonoBehaviour:
   lines:
   - line: Captain! What happened?
     name: Space Marine
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: a0bd7c4788f266142bf4021b514d9c9d, type: 3}
     fromTheRigt: 0
   - line: "I don\u2019t\u2026 Well, I do know. But by god, I\u2019m so sorry."
     name: Pilot
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: e3525f16c092da042ab8e6a000ce19e6, type: 3}
     fromTheRigt: 1
   - line: "Don\u2019t be, we\u2019re all in this together!"
     name: Space Marine
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: a0bd7c4788f266142bf4021b514d9c9d, type: 3}
     fromTheRigt: 0
   - line: "We are, but I messed it up! I should\u2019ve seen it coming. Leading this
       ship was a bad idea from the start."
     name: Pilot
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: e3525f16c092da042ab8e6a000ce19e6, type: 3}
     fromTheRigt: 1
   - line: "I get how you feel, boss, but we don\u2019t have time to-"
     name: Space Marine
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: a0bd7c4788f266142bf4021b514d9c9d, type: 3}
     fromTheRigt: 0
   - line: "My mother always told me I would never make it as an expeditional pilot.
       She wanted me to become an accountant, and by god, she was so right. I mean,
       I was reading so much about anything really, I could\u2019ve been\u2026"
     name: Pilot
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: e3525f16c092da042ab8e6a000ce19e6, type: 3}
     fromTheRigt: 1
   - line: "Boss, time is running out, but we could still have a chance to \u2013"
     name: Space Marine
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: a0bd7c4788f266142bf4021b514d9c9d, type: 3}
     fromTheRigt: 0
   - line: It was pure chance that we all landed here in the first place. I mean,
       look at the computer!
     name: Pilot
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: e3525f16c092da042ab8e6a000ce19e6, type: 3}
     fromTheRigt: 1
   - line: What happened to the computer?
     name: Space Marine
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: a0bd7c4788f266142bf4021b514d9c9d, type: 3}
     fromTheRigt: 0
   - line: "I was too clumsy and ripped a piece out while flying through those dangerous
       asteroids. My grip is so incredibly strong, and when I\u2019m nervous I tend
       to not let go of things\u2026"
     name: Pilot
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: e3525f16c092da042ab8e6a000ce19e6, type: 3}
     fromTheRigt: 1
   - line: Everyone knows that feeling, boss. We should focus on-
     name: Space Marine
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: a0bd7c4788f266142bf4021b514d9c9d, type: 3}
     fromTheRigt: 0
   - line: "Once, while I was at the Academy, I gripped the arm of my best friend
       so hard it nearly broke. This destroyed our relationship, and I couldn\u2019t
       trust my hands ever since"
     name: Pilot
-    icon: {fileID: 0}
+    icon: {fileID: 21300000, guid: e3525f16c092da042ab8e6a000ce19e6, type: 3}
     fromTheRigt: 1
   action:
     m_PersistentCalls:
